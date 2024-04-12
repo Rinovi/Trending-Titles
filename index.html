@@ -9,20 +9,45 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
+    <navbar><ul class="flex justify-center space-x-4">
+            <li><a href="#" class="text-blue-500 hover:underline">Movie Picker</a></li>
+            <li><a href="#" class="text-blue-500 hover:underline">Top Genres</a></li>
+            <li><a href="#" class="text-blue-500 hover:underline">Search or link to socials etc.</a></li>
+        </ul></navbar>
     <header class="bg-blue-500 text-white text-center py-4">
         <h1 class="text-3xl">What are you in the mood for?</h1>
     </header>
     
-    <nav class="bg-gray-200 py-2">
-        <ul class="flex justify-center space-x-4">
-            <li><a href="#" class="text-blue-500 hover:underline">Movie Picker</a></li>
-            <li><a href="#" class="text-blue-500 hover:underline">Top Genres</a></li>
-            <li><a href="#" class="text-blue-500 hover:underline">Search or link to socials etc.</a></li>
-        </ul>
-    </nav>
-    
+  
     <main class="container mx-auto mt-4">
-        <!-- Your main content here with Tailwind CSS classes -->
+        <div class="container mx-auto mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Card Container 1 -->
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <h2 class="text-xl font-semibold">Card 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+    
+            <!-- Repeat the card container structure for the remaining 15 cards -->
+            <!-- Card Container 2 -->
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <h2 class="text-xl font-semibold">Card 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+    
+            <!-- Card Container 3 -->
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <h2 class="text-xl font-semibold">Card 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+              <!-- Card Container 4 -->
+              <div class="bg-white rounded-lg shadow-md p-4">
+                <h2 class="text-xl font-semibold">Card 4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+    
+            <!-- Repeat this structure for the remaining cards -->
+        </div>
     </main>
     
     <footer class="bg-gray-200 text-center py-2">
