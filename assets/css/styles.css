@@ -4,3 +4,8 @@
     <h3>Some sample text</h3>
   </figcaption>
 </figure>
+
+.poster-img {
+  max-width: 10%; 
+  height: auto;
+}
