@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trending Titles</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Include Tailwind CSS styles -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
@@ -52,10 +53,17 @@
             <!-- Add more card containers as needed -->
 
         </div>
+        <div id="moviesContainer" style="color: white;">
+            <h2>Movie List</h2>
+            <ul id="movieList"></ul>
+            <button id="getRandomMoviesButton">Get Random Movies</button>
+        </div>
     </main>
 
     <footer class="text-center py-2 text-white">
         <p>&copy; 2024 Trending Titles / credits here</p>
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
