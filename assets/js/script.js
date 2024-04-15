@@ -1,5 +1,5 @@
 const getRandomMoviesButton = document.getElementById('getRandomMoviesButton');
-const movieAPI = "https://api.themoviedb.org/3/discover/movie?language=en&with_genres=28,16,27"
+const movieAPI = "https://api.themoviedb.org/3/discover/movie?language=en&with_genres=27"
 const oldAPI = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&language=en-US&page=1'
 
 
@@ -19,7 +19,7 @@ getRandomMoviesButton.addEventListener('click', function() {
         const movieContainer = document.getElementById('moviesContainer');
         movieContainer.innerHTML = ''; 
         const moviesList = document.createElement('ul');
-        data.results.forEach(function(movie) { //for loop to make 5 movies appear
+        data.results.forEach(function(movie) { 
             const listItem = document.createElement('li');
             listItem.textContent = movie.title;
             moviesList.appendChild(listItem);
@@ -34,7 +34,7 @@ getRandomMoviesButton.addEventListener('click', function() {
             }
             moviesList.appendChild(listItem)
         });
-        movieContainer.appendChild(moviesList);
+        movieContainer.appendChild(moviesList); //for loop to make 5 movies appear in console
         for (let index = 0; index < 5; index++) {
         console.log(data.results[index])    
         }
