@@ -10,86 +10,449 @@
     </link>
     <!--Mustafa-Added path to stylesheet-->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <!-- <link rel="stylesheet" href="css/izmir.min.css"> -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <title>Trending Titles</title>
     <!-- Include Tailwind CSS styles -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        main {
-            flex-grow: 1;
-        }
-    </style>
+    <!-- Website Background-->
+    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
 </head>
-    <!-- <body class="bg-gray-100 text-gray-900 font-sans"> -->
-        <body class="bg-cover bg-center" style="background-image: url('./heroes.jpg')"></body>
-        <navbar>
-            <ul class="flex justify-center space-x-4">
-                <li><a href="#" class="text-blue-500 hover:underline">Movie Picker</a></li>
-                <li><a href="#" class="text-blue-500 hover:underline">Top Genres</a></li>
-                <li><a href="#" class="text-blue-500 hover:underline">Search or link to socials etc.</a></li>
-            </ul>
-        </navbar>
-        <header class="bg-blue-500 text-white text-center py-4">
-            <h1 class="text-3xl">What are you in the mood for?</h1>
-       
-            <!--Mustafa--Added Modal Button-->
-        </header>
-        <button id="myBtn">How to? Click here</button>
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-            <!-- Modal content. Need modifications -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
+
+<!-- Header -->
+<header>
+    <div class="mb-16">
+        <div class="bg-gray-100">
+            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+                    <div>
+                        <p
+                            class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                            Trending Titles
+                        </p>
+                    </div>
+                    <h2
+                        class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+                        <span class="relative inline-block">
+                            <svg viewBox="0 0 52 24" fill="currentColor"
+                                class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-gray-400 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                                <defs>
+                                    <pattern id="dc223fcc-6d72-4ebc-b4ef-abe121034d6e" x="0" y="0" width=".135"
+                                        height=".30">
+                                        <circle cx="1" cy="1" r=".7"></circle>
+                                    </pattern>
+                                </defs>
+                                <rect fill="url(#dc223fcc-6d72-4ebc-b4ef-abe121034d6e)" width="52" height="24"></rect>
+                            </svg>
+                            <span class="relative">What</span>
+                        </span>
+                        are you in the mood for?
+                    </h2>
+                    <p class="text-base text-gray-700 md:text-lg">
+                        Select 3 genres to receive a movie recommendation
+                    </p>
+                </div>
+                <div class="flex items-center sm:justify-center">
+                    <button type="submit"
+                        class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                        Get Started
+                    </button>
+                    <a href="/" aria-label=""
+                        class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700">Learn
+                        more</a>
+                </div>
             </div>
-    
         </div>
-        <main class="container mx-auto mt-4">
-            <div class="container mx-auto mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- Card Container 1 -->
-                <div class="bg-white rounded-lg shadow-md p-4">
-                    <h2 class="text-xl font-semibold">Card 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="relative px-4 sm:px-0">
+            <div class="absolute inset-0 bg-gray-100 h-1/2"></div>
+            <div
+                class="relative grid mx-auto overflow-hidden bg-white divide-y rounded shadow sm:divide-y-0 sm:divide-x sm:max-w-screen-sm sm:grid-cols-3 lg:max-w-screen-md">
+                <div class="inline-block p-8 text-center">
+                    <div class="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-50">
+                        <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                    </div>
+                    <p class="font-bold tracking-wide text-gray-800">Select 3 genres</p>
+                </div>
+                <div class="inline-block p-8 text-center">
+                    <div class="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-50">
+                        <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                    </div>
+                    <p class="font-bold tracking-wide text-gray-800">Press the randomize button</p>
+                </div>
+                <div class="inline-block p-8 text-center">
+                    <div class="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-50">
+                        <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                    </div>
+                    <p class="font-bold tracking-wide text-gray-800">Check out our movie suggestion</p>
                 </div>
 
-                <!-- Repeat the card container structure for the remaining 15 cards -->
-                <!-- Card Container 2 -->
-                <div class="bg-white rounded-lg shadow-md p-4">
-                    <h2 class="text-xl font-semibold">Card 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-
-                <!-- Card Container 3 -->
-                <div class="bg-white rounded-lg shadow-md p-4">
-                    <h2 class="text-xl font-semibold">Card 3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-
-                <!-- Card Container 4 -->
-                <div class="bg-white rounded-lg shadow-md p-4">
-                    <h2 class="text-xl font-semibold">Card 4</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-
-                <!-- Repeat this structure for the remaining cards -->
             </div>
-        </main>
+        </div>
+    </div>
+    <!--Mustafa--Added Modal Button-->
+</header>
+<!-- <button id="myBtn">How to? Click here</button> -->
+<!-- The Modal -->
+<!-- <div id="myModal" class="modal"> -->
+    <!-- Modal content. Need modifications -->
+    <!-- <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+    </div>
 
-        <footer class="bg-gray-200 text-center py-2">
-            <p>&copy; 2024 Trending Titles / credits here</p>
-        </footer>
-        <script src="assets/js/script.js"></script>
-    </body>
+</div> -->
+<main>
+    <div class="w-screen h-screen flex items-center justify-center">
+        <div class="grid grid-cols-4 gap-4">
+            <!--Buttons-->
+            <!--Action-->
+            <button id="action"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://moviesfilmsandflix.files.wordpress.com/2012/08/the-expendables-2-movie-poster.jpg?w=584"
+                    alt="Your Image Description">
+            </button>
+
+
+
+            <!--Crime-->
+            <button id="crime"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://w0.peakpx.com/wallpaper/107/381/HD-wallpaper-criminal-movie-poster-criminal-movies.jpg"
+                    alt="Your Image Description">
+            </button>
+
+
+            <!--Drama-->
+            <button id="drama"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover" src="https://wallpapercave.com/wp/wp13196792.jpg"
+                    alt="Your Image Description">
+            </button>
+
+
+            <!--Fantasy-->
+            <button id="fantasy"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover" src="https://wallpapercave.com/wp/wp6986354.jpg"
+                    alt="Your Image Description">
+            </button>
+
+            <!--Horror-->
+            <button id="horror"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://static.vecteezy.com/system/resources/thumbnails/027/103/158/small/zombie-emerges-from-spooky-graveyard-on-halloween-night-full-moon-and-bats-photo.jpg"
+                    alt="Your Image Description">
+            </button>
+
+            <!--Comedy-->
+            <button id="comedy"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover" src="https://wallpapercave.com/wp/wp11029112.jpg"
+                    alt="Your Image Description">
+            </button>
+
+            <!--Romance-->
+            <button id="romance"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://img.freepik.com/premium-vector/love-poster-movie_992397-2633.jpg"
+                    alt="Your Image Description">
+            </button>
+
+            <!--Science Fiction-->
+            <button id="science-fiction"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover" src="https://wallpapercave.com/wp/wp6971709.jpg"
+                    alt="Your Image Description">
+            </button>
+
+            <!--Sports -->
+            <button id="sports"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://img.freepik.com/premium-photo/movie-poster-movie_14117-14363.jpg"
+                    alt="Your Image Description">
+            </button>
+
+            <!--Thriller -->
+            <button id="thriller"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/x/t/3/medium-v-poster-16122493-collage-white-background-thriller-original-imagkzhpwvxzpfha.jpeg?q=90&crop=false"
+                    alt="Your Image Description">
+            </button>
+
+            <!--Mystery -->
+            <button id="mystery"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://cdn.vectorstock.com/i/1000v/20/54/mystery-movies-retro-poster-design-vector-34252054.jpg"
+                    alt="Your Image Description">
+            </button>
+
+            <!--War -->
+            <button id="war"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://i.pinimg.com/736x/b9/2e/63/b92e63e28d508b5a83bb8ffcdf7ab021.jpg"
+                    alt="Your Image Description">
+            </button>
+
+
+            <!--Western -->
+            <button id="western"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://wallpapers.com/images/hd/cowboy-background-xmkxqfcvafavhzye.jpg"
+                    alt="Your Image Description">
+            </button>
+
+            <!--Anime -->
+            <button id="anime"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://lh4.googleusercontent.com/proxy/bHVicKZdLz2TUv9FpJSXEMK4EzZy0qhLqx59-5cSqK6qwmxF3Dd0fRr6X_Omsnff0fysnmh1qiiU8x_4HYGbwJ5jqvVLAoXiyh0jCKpT7G7zdXO1SU-v10OARgK9re1FucQKroNXhfeeEfw"
+                    alt="Your Image Description">
+            </button>
+
+            <!--Foreign -->
+            <button id="foreign"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://images7.alphacoders.com/341/341195.jpg" alt="Your Image Description">
+            </button>
+
+            <!--Musical -->
+            <button id="musical"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://c4.wallpaperflare.com/wallpaper/28/238/458/movie-high-school-musical-wallpaper-preview.jpg"
+                    alt="Your Image Description">
+            </button>
+
+            <!--Randombtn-->
+            <!-- <button id="randomizer"
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                <img class="rounded-full w-full h-full object-cover"
+                    src="https://c4.wallpaperflare.com/wallpaper/28/238/458/movie-high-school-musical-wallpaper-preview.jpg"
+                    alt="Your Image Description">
+            </button> -->
+        </div>
+        <script>
+            tippy('#action', {
+                content: 'Action',
+                animation: 'fade',
+                delay: [200, 200]
+            });
+            tippy('#crime', {
+                content: 'Crime',
+                animation: 'fade',
+                delay: [200, 200]
+            });
+            tippy('#drama', {
+                content: 'Drama',
+                animation: 'fade',
+                delay: [200, 200]
+            });
+            tippy('#fantasy', {
+                content: 'Fantasy',
+                animation: 'fade',
+                delay: [200, 200]
+            });
+            tippy('#horror', {
+                content: 'Horror',
+                animation: 'fade',
+                placement: 'left-start',
+                delay: [200, 200]
+            });
+            tippy('#comedy', {
+                content: 'Comedy',
+                animation: 'fade',
+                placement: 'left-start',
+                delay: [200, 200]
+            });
+            tippy('#romance', {
+                content: 'Romance',
+                animation: 'fade',
+                placement: 'bottom',
+                delay: [200, 200]
+            });
+            tippy('#science-fiction', {
+                content: 'Science Fiction',
+                animation: 'fade',
+                placement: 'bottom',
+                delay: [200, 200]
+            });
+            tippy('#sports', {
+                content: 'Sports',
+                animation: 'fade',
+                placement: 'bottom',
+                delay: [200, 200]
+            });
+            tippy('#thriller', {
+                content: 'Thriller',
+                animation: 'fade',
+                placement: 'bottom',
+                delay: [200, 200]
+            });
+            tippy('#mystery', {
+                content: 'Mystery',
+                animation: 'fade',
+                placement: 'right-start',
+                delay: [200, 200]
+            });
+            tippy('#war', {
+                content: 'War',
+                animation: 'fade',
+                placement: 'right-start',
+                delay: [200, 200]
+            });
+            tippy('#western', {
+                content: 'Western',
+                animation: 'fade',
+                placement: 'top',
+                delay: [200, 200]
+            });
+            tippy('#anime', {
+                content: 'Anime',
+                animation: 'fade',
+                placement: 'top',
+                delay: [200, 200]
+            });
+            tippy('#foreign', {
+                content: 'Foreign',
+                animation: 'fade',
+                placement: 'bottom',
+                delay: [200, 200],
+            });
+            tippy('#musical', {
+                content: 'Musical',
+                animation: 'fade',
+                placement: 'bottom',
+                delay: [200, 200]
+            });
+            // tippy('#randombtn', {
+            //     content: 'Go',
+            //     animation: 'fade',
+            //     placement: 'bottom',
+            //     delay: [200, 200]
+            // });
+        </script>
+    </div>
+    <!-- This is what a card would look like -->
+    <div class="min-h-screen grid place-items-center font-mono bg-black">
+
+        <div class="bg-white rounded-md bg-gray-800 shadow-lg shadow-green">
+            <div class="md:flex px-4 leading-none max-w-4xl">
+                <div class="flex-none ">
+                    <img src="https://creativereview.imgix.net/content/uploads/2019/12/joker_full.jpg?auto=compress,format&q=60&w=1012&h=1500"
+                        alt="pic"
+                        class="h-72 w-56 rounded-md shadow-2xl transform -translate-y-4 border-4 border-gray-300 shadow-lg" />
+                </div>
+
+                <div class="flex-col text-gray-300">
+
+                    <p class="pt-4 text-2xl font-bold">Joker (2020)</p>
+                    <hr class="hr-text" data-content="">
+                    <div class="text-md flex justify-between px-4 my-2">
+                        <span class="font-bold">2h 2min | Crime, Drama, Thriller</span>
+                        <span class="font-bold"></span>
+                    </div>
+                    <p class="hidden md:block px-4 my-4 text-sm text-left">In Gotham City, mentally troubled comedian
+                        Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of
+                        revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.
+                    </p>
+
+                    <p class="flex text-md px-4 my-2">
+                        Rating: 9.0/10
+                        <span class="font-bold px-2">|</span>
+                        Mood: Dark
+                    </p>
+
+                    <div class="text-xs">
+                        <button type="button"
+                            class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">TRAILER</button>
+
+                        <button type="button"
+                            class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">IMDB</button>
+
+                        <button type="button"
+                            class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">AMAZON</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+</body>
+<footer>
+    <!-- Footer -->
+    <div class="w-full min-h-screen flex items-center justify-center bg-black">
+        <div class="w-full px-4 text-white flex flex-col">
+            <div class="w-full text-7xl font-bold">
+            </div>
+            <div class="flex flex-col">
+                <div class="flex mt-24 mb-12 flex-row justify-between">
+                    <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">About</a>
+                    <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Github</a>
+                    <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Why us</a>
+                    <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Contact</a>
+                    <div class="flex flex-row space-x-8 items-center justify-between">
+                        <a>
+                            <svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.89782 12V6.53514H5.67481L5.93895 4.39547H3.89782V3.03259C3.89782 2.41516 4.06363 1.99243 4.91774 1.99243H6V0.0847928C5.47342 0.0262443 4.94412 -0.00202566 4.41453 0.000112795C2.84383 0.000112795 1.76542 0.994936 1.76542 2.82122V4.39147H0V6.53114H1.76928V12H3.89782Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a>
+                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.99536 2.91345C5.17815 2.91345 4.39441 3.23809 3.81655 3.81594C3.2387 4.3938 2.91406 5.17754 2.91406 5.99475C2.91406 6.81196 3.2387 7.5957 3.81655 8.17356C4.39441 8.75141 5.17815 9.07605 5.99536 9.07605C6.81257 9.07605 7.59631 8.75141 8.17417 8.17356C8.75202 7.5957 9.07666 6.81196 9.07666 5.99475C9.07666 5.17754 8.75202 4.3938 8.17417 3.81594C7.59631 3.23809 6.81257 2.91345 5.99536 2.91345ZM5.99536 7.99586C5.46446 7.99586 4.9553 7.78496 4.57989 7.40955C4.20448 7.03415 3.99358 6.52499 3.99358 5.99408C3.99358 5.46318 4.20448 4.95402 4.57989 4.57861C4.9553 4.20321 5.46446 3.99231 5.99536 3.99231C6.52626 3.99231 7.03542 4.20321 7.41083 4.57861C7.78624 4.95402 7.99714 5.46318 7.99714 5.99408C7.99714 6.52499 7.78624 7.03415 7.41083 7.40955C7.03542 7.78496 6.52626 7.99586 5.99536 7.99586Z"
+                                    fill="white" />
+                                <path
+                                    d="M9.19863 3.51848C9.59537 3.51848 9.91698 3.19687 9.91698 2.80013C9.91698 2.4034 9.59537 2.08179 9.19863 2.08179C8.8019 2.08179 8.48029 2.4034 8.48029 2.80013C8.48029 3.19687 8.8019 3.51848 9.19863 3.51848Z"
+                                    fill="white" />
+                                <path
+                                    d="M11.6821 2.06975C11.5279 1.67138 11.2921 1.30961 10.99 1.00759C10.6879 0.705576 10.326 0.469972 9.92759 0.31586C9.46135 0.140842 8.9688 0.0462069 8.4709 0.0359839C7.82919 0.00799638 7.62594 0 5.99867 0C4.37139 0 4.16282 -6.70254e-08 3.52643 0.0359839C3.02891 0.0456842 2.53671 0.140339 2.07108 0.31586C1.67255 0.469792 1.31059 0.705333 1.00844 1.00737C0.706289 1.30941 0.47061 1.67127 0.316526 2.06975C0.141474 2.53595 0.0470554 3.02855 0.0373167 3.52643C0.00866281 4.16748 0 4.37072 0 5.99867C0 7.62594 -4.96485e-09 7.83319 0.0373167 8.4709C0.0473123 8.96935 0.14127 9.46113 0.316526 9.92825C0.471042 10.3266 0.70695 10.6883 1.00918 10.9903C1.3114 11.2923 1.6733 11.5279 2.07175 11.6821C2.5365 11.8642 3.0289 11.9656 3.52777 11.982C4.16948 12.01 4.37272 12.0187 6 12.0187C7.62728 12.0187 7.83585 12.0187 8.47223 11.982C8.97008 11.9719 9.46262 11.8775 9.92892 11.7028C10.3272 11.5483 10.689 11.3125 10.9911 11.0104C11.2932 10.7083 11.529 10.3466 11.6835 9.94825C11.8587 9.48179 11.9527 8.99 11.9627 8.49156C11.9913 7.85051 12 7.64727 12 6.01932C12 4.39138 12 4.18481 11.9627 3.54709C11.9549 3.04216 11.86 2.54237 11.6821 2.06975ZM10.8705 8.42159C10.8662 8.80562 10.7961 9.18608 10.6633 9.54642C10.5632 9.80555 10.41 10.0409 10.2135 10.2372C10.017 10.4336 9.78162 10.5867 9.52243 10.6866C9.16608 10.8188 8.78967 10.8889 8.4096 10.8938C7.77654 10.9231 7.59796 10.9305 5.97468 10.9305C4.35007 10.9305 4.18414 10.9305 3.53909 10.8938C3.15921 10.8892 2.78298 10.8191 2.42692 10.6866C2.16683 10.5873 1.93048 10.4345 1.73316 10.2381C1.53584 10.0417 1.38194 9.80605 1.28143 9.54642C1.15045 9.18995 1.08039 8.81398 1.07419 8.43425C1.04554 7.8012 1.03887 7.62261 1.03887 5.99933C1.03887 4.37539 1.03887 4.20946 1.07419 3.56375C1.0785 3.17993 1.14859 2.7997 1.28143 2.43958C1.48467 1.91382 1.90116 1.5 2.42692 1.29876C2.78316 1.16691 3.15928 1.09682 3.53909 1.09151C4.17281 1.06286 4.35073 1.05486 5.97468 1.05486C7.59862 1.05486 7.76522 1.05486 8.4096 1.09151C8.7897 1.09609 9.16617 1.1662 9.52243 1.29876C9.7816 1.39889 10.017 1.55211 10.2134 1.74858C10.4099 1.94504 10.5631 2.18041 10.6633 2.43958C10.7942 2.79606 10.8643 3.17203 10.8705 3.55175C10.8992 4.18547 10.9065 4.36339 10.9065 5.98734C10.9065 7.61062 10.9065 7.78521 10.8778 8.42226H10.8705V8.42159Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ?si=dIaB9ed5475Oh7xd">
+                            <svg width="13" height="9" viewBox="0 0 13 9" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.7355 1.415C12.6616 1.14357 12.517 0.896024 12.3162 0.697014C12.1154 0.498004 11.8654 0.354468 11.5911 0.280692C10.5739 0.00450089 6.5045 4.87928e-06 6.5045 4.87928e-06C6.5045 4.87928e-06 2.43578 -0.00449139 1.41795 0.259496C1.14379 0.336667 0.894302 0.482233 0.693428 0.68222C0.492554 0.882207 0.347041 1.1299 0.270859 1.40152C0.00259923 2.40737 9.51671e-07 4.49358 9.51671e-07 4.49358C9.51671e-07 4.49358 -0.0025972 6.59006 0.263714 7.58564C0.413109 8.13609 0.851549 8.57094 1.40885 8.71931C2.43643 8.9955 6.49476 9 6.49476 9C6.49476 9 10.5641 9.00449 11.5813 8.74115C11.8557 8.6675 12.106 8.52429 12.3073 8.32569C12.5086 8.12709 12.6539 7.87996 12.729 7.60876C12.998 6.60355 12.9999 4.51798 12.9999 4.51798C12.9999 4.51798 13.0129 2.42086 12.7355 1.415ZM5.20282 6.42628L5.20607 2.57244L8.58823 4.50257L5.20282 6.42628Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <hr class="border-gray-600" />
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+<script src="assets/js/script.js"></script>
+
 
 </html>

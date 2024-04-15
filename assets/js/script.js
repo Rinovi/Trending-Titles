@@ -70,3 +70,4 @@ getRandomMoviesButton.addEventListener('click', function() {
         }
     });
 });
+
