@@ -45,3 +45,8 @@
 }
 
 /*End Modal Styling*/
+
+.poster-img {
+  max-width: 10%; 
+  height: auto;
+}
