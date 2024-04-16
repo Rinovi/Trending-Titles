@@ -19,9 +19,11 @@
     <!-- Include Tailwind CSS styles -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Website Background-->
-    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+    <div class="absolute inset-0 -z-10 h-full w-full items-center py-24">
 </head>
 
+<!-- <body class="h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"> -->
+    <body class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
 <!-- Header -->
 <header>
     <div class="mb-16">
@@ -57,11 +59,11 @@
                 </div>
                 <div class="flex items-center sm:justify-center">
                     <button type="submit"
-                        class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                        class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-warning text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
                         Get Started
                     </button>
                     <a href="/" aria-label=""
-                        class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700">Learn
+                        class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700 bg-warning text-white ">Learn
                         more</a>
                 </div>
             </div>
@@ -119,7 +121,7 @@
             <!--Buttons-->
             <!--Action-->
             <button id="action"
-                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600" style="margin-right: 45px;">
                 <img class="rounded-full w-full h-full object-cover"
                     src="https://moviesfilmsandflix.files.wordpress.com/2012/08/the-expendables-2-movie-poster.jpg?w=584"
                     alt="Your Image Description">
@@ -355,7 +357,7 @@
         </script>
     </div>
     <!-- This is what a card would look like -->
-    <div class="min-h-screen grid place-items-center font-mono bg-black">
+    <div class="min-h-screen grid place-items-center font-mono">
 
         <div class="bg-white rounded-md bg-gray-800 shadow-lg shadow-green">
             <div class="md:flex px-4 leading-none max-w-4xl">
@@ -403,7 +405,7 @@
 </body>
 <footer>
     <!-- Footer -->
-    <div class="w-full min-h-screen flex items-center justify-center bg-black">
+    <div class="w-full min-h-screen flex items-center justify-center">
         <div class="w-full px-4 text-white flex flex-col">
             <div class="w-full text-7xl font-bold">
             </div>
@@ -453,6 +455,6 @@
     </div>
 </footer>
 <script src="assets/js/script.js"></script>
-
+</body>
 
 </html>
