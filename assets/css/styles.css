@@ -127,3 +127,8 @@ body {
 button img {
   object-fit: cover; /* Ensures the image covers the entire area of the button */
 }
+
+.footer-container {
+  max-width: 1600px; /* Set the maximum width as per your design */
+  margin: 0 auto; /* Center the container horizontally */
+}
