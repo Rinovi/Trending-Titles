@@ -46,9 +46,22 @@
 
 /*End Modal Styling*/
 
+/* movie and poster styling */
 .poster-img {
-  max-width: 10%; 
+  max-width: 90%; 
 }
+
+#moviesContainer {
+  justify-content: center;
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+  display: flex; 
+  align-items: center; 
+}
+/* end of movie and poster styling */
 
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
