@@ -26,7 +26,7 @@ window.onclick = function(event) {
 }
 
 
-
+//
 
 const getRandomMoviesButton = document.getElementById('getRandomMoviesButton');
 const movieAPI = `https://api.themoviedb.org/3/discover/movie?language=en&with_genres=27`
