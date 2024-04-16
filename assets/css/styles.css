@@ -154,3 +154,26 @@ button img {
   max-width: 1600px; /* Set the maximum width as per your design */
   margin: 0 auto; /* Center the container horizontally */
 }
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  width: 50%;
+  margin: 20% auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#closeModal {
+  margin-top: 10px;
+}
