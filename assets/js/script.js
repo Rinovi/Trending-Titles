@@ -53,8 +53,10 @@ getRandomMoviesButton.addEventListener('click', function() {
       for (let index = 0; index < 5; index++) {
           const movie = data.results[index];
           const listItem = document.createElement('li');
-          listItem.textContent = movie.title;
-          moviesList.appendChild(listItem);
+          const movieInfo = document.createElement('div');
+          const titleParagraph = document.createElement('p');
+          titleParagraph.textContent = movie.title;
+          movieInfo.appendChild(titleParagraph);
 
           if (movie.poster_path){
               const posterURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
@@ -62,6 +64,7 @@ getRandomMoviesButton.addEventListener('click', function() {
               posterIMG.src = posterURL;
               posterIMG.alt = `${movie.title} Poster`;
               posterIMG.classList.add(`poster-img`)
+              listItem.appendChild(movieInfo);
               listItem.appendChild(posterIMG);
           }
           moviesList.appendChild(listItem);
