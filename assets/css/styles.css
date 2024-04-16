@@ -63,6 +63,15 @@ ul {
 }
 /* end of movie and poster styling */
 
+
+#ChuckNorrisJoke {
+  font-size: 18px;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
