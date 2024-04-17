@@ -15,15 +15,6 @@ $(document).ready(function() {
   });
 });
 
-// Get the button and target section elements
-const startNowButton = document.getElementById('start-now-button');
-const selectGenresSection = document.getElementById('select-genres');
-
-// Add a click event listener to the button
-startNowButton.addEventListener('click', () => {
-    // Scroll to the target section smoothly
-    selectGenresSection.scrollIntoView({ behavior: 'smooth' });
-});
 
 const getRandomMoviesButton = document.getElementById('getRandomMoviesButton');
 const movieAPI = `https://api.themoviedb.org/3/discover/movie?language=en&with_genres=27`
@@ -82,12 +73,6 @@ getRandomMoviesButton.addEventListener('click', function() {
 function showModal() {
   const modal = document.getElementById('modal');
   modal.style.display = 'block';
-}
-
-// Function to close the modal
-function closeModal() {
-  const modal = document.getElementById('modal');
-  modal.style.display = 'none';
 }
 
 // Event listener for the close button
