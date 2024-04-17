@@ -6,7 +6,7 @@ $(document).ready(function() {
       contentType: 'application/json',
       success: function(result) {
           console.log('Chuck Norris joke API response:', result);
-          $('#ChuckNorrisJoke').text(result.value); 
+          $('#ChuckNorrisJoke').text(result.joke); // Access the 'joke' property from the API response
       },
       error: function ajaxError(jqXHR) {
           console.error('Error: ', jqXHR.responseText);
