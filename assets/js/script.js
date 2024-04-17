@@ -1,5 +1,5 @@
 let genresId;
-let genresList=['action','crime','drama','fantasy', 'horror', 'comedy','romance','sceince-fiction','sports','thriller','mystery', 'war','western', 'anime', 'foreign', 'musical']
+let genresList=['action','crime','drama','fantasy', 'horror', 'comedy','romance','science-fiction','sports','thriller','mystery', 'war','western', 'anime', 'foreign', 'musical']
 
 $(document).ready(function() {
   $.ajax({
