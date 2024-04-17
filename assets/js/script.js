@@ -1,3 +1,6 @@
+let genresId;
+let genresList=['action','crime','drama','fantasy', 'horror', 'comedy','romance','sceince-fiction','sports','thriller','mystery', 'war','western', 'anime', 'foreign', 'musical']
+
 $(document).ready(function() {
   $.ajax({
       method: 'GET',
@@ -17,11 +20,21 @@ $(document).ready(function() {
 
 
 const getRandomMoviesButton = document.getElementById('getRandomMoviesButton');
-const movieAPI = `https://api.themoviedb.org/3/discover/movie?language=en&with_genres=27`
-const oldAPI = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&language=en-US&page=1'
 
+const oldAPI = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&language=en-US&page=1'
+for(let i=0; i<genresList.length;i++){
+  document.getElementById(`${genresList[i]}`).addEventListener('click', function(event){
+    event.preventDefault();
+   console.log(event.target);
+    let selectedGenresId= event.target.dataset.genres_id
+  
+    console.log(selectedGenresId);
+    genresId=selectedGenresId
+  })
+}
 
 getRandomMoviesButton.addEventListener('click', function() {
+  let movieAPI = `https://api.themoviedb.org/3/discover/movie?language=en&with_genres=${genresId}`
   const accessToken = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYzgzM2Y1YWYwZGYzN2NiMzJlZWMzODNmZDY3MDBlYiIsInN1YiI6IjY2MTVmM2U0Mzk3ZGYwMDE3ZGM4YzA0OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-oNPj8d96s08rtB6JLbcFxCXWF7pT_V2hkcxrMtHgqg'; 
   
   fetch(movieAPI, {
@@ -34,12 +47,16 @@ getRandomMoviesButton.addEventListener('click', function() {
   })
   .then(function(data) {
       console.log(data);
+      console.log(movieAPI)
       const movieContainer = document.getElementById('moviesContainer');
       movieContainer.innerHTML = ''; 
       const moviesList = document.createElement('ul');
       
       for (let index = 0; index < 5; index++) {
           const movie = data.results[index];
+
+          const genres =data.results[index].genres_id[0]
+
           const listItem = document.createElement('li');
           const movieInfo = document.createElement('div');
           const titleParagraph = document.createElement('p');
@@ -52,9 +69,13 @@ getRandomMoviesButton.addEventListener('click', function() {
               posterIMG.src = posterURL;
               posterIMG.alt = `${movie.title} Poster`;
               posterIMG.classList.add(`poster-img`)
+
+             
+
               listItem.appendChild(movieInfo);
               listItem.appendChild(posterIMG);
           }
+          console.log(listItem);
           moviesList.appendChild(listItem);
       }
       
