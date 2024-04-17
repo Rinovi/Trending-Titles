@@ -55,7 +55,13 @@ getRandomMoviesButton.addEventListener('click', function() {
       for (let index = 0; index < 5; index++) {
           const movie = data.results[index];
 
-          const genres =data.results[index].genres_id[0]
+          const genres = data.results[index].genres; // Assuming genres are stored in an array
+if (genres && genres.length > 0) {
+    const genreName = genres[0].name; // Access the genre name or ID as needed
+    // Continue with your code logic using the genre information
+} else {
+    // Handle the case where genre information is missing
+}
 
           const listItem = document.createElement('li');
           const movieInfo = document.createElement('div');
