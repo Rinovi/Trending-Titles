@@ -75,6 +75,11 @@ function showModal() {
   modal.style.display = 'block';
 }
 
+function closeModal() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'none';
+}
+
 // Event listener for the close button
 document.getElementById('closeModal').addEventListener('click', closeModal);
 
