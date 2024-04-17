@@ -106,3 +106,13 @@ function handleSave() {
 
 // Add event listener to the save button
 document.getElementById('getRandomMoviesButton').addEventListener('click', handleSave);
+
+// Get the button and target section elements
+const startNowButton = document.getElementById('start-now-button');
+const selectGenresSection = document.getElementById('select-genres');
+
+// Add a click event listener to the button
+startNowButton.addEventListener('click', () => {
+  // Scroll to the target section smoothly
+  selectGenresSection.scrollIntoView({ behavior: 'smooth' });
+});
