@@ -47,13 +47,14 @@
 /*End Modal Styling*/
 
 /* movie and poster styling */
+
+
 .poster-img {
   max-width: 90%; 
 }
 
 #moviesContainer {
   justify-content: center;
-  display: flex;
 }
 
 ul {
@@ -65,11 +66,10 @@ ul {
 
 
 #ChuckNorrisJoke {
-  font-size: 18px;
-  color: #333;
-  background-color: #f0f0f0;
+  font-size: 28px;
   padding: 10px;
   border-radius: 5px;
+  padding-top: 30px;
 }
 
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
