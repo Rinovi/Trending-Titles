@@ -22,7 +22,9 @@
     <!-- Website Background-->
     <div class="absolute inset-0 -z-10 h-full w-full items-center py-24">
 </head>
-<body class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
+
+<body
+    class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
     <!-- Header -->
     <header>
         <div class="mb-16">
@@ -53,17 +55,19 @@
                             </span>
                             are you in the mood for?
                         </h2>
-                    </div>
+                    </div>     <!-- Start Now Button -->
                     <div class="flex items-center sm:justify-center">
-                        <button id="start-now-button" type="submit" class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-blue-500 text-white transition duration-200 rounded shadow-md bg-blue-500 hover:bg-gray-800 focus:shadow-outline focus:outline-none">
+                        <button id="start-now-button" type="submit"
+                            class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-blue-500 text-white transition duration-200 rounded shadow-md bg-blue-500 hover:bg-gray-800 focus:shadow-outline focus:outline-none">
                             Start Now
                         </button>
                     </div>
                 </div>
             </div>
+                <!-- Instructional cards -->
             <div class="relative px-4 sm:px-0" id="select-genres">
                 <div class="absolute inset-0 bg-gray-100 h-1/2"></div>
-                <div
+                <div 
                     class="relative grid mx-auto overflow-hidden bg-white divide-y rounded shadow sm:divide-y-0 sm:divide-x sm:max-w-screen-sm sm:grid-cols-3 lg:max-w-screen-md">
                     <div class="inline-block p-8 text-center">
                         <div class="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-50">
@@ -107,132 +111,136 @@
                 <!--Action-->
 
                 <button id="action"
-
                     class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
                     <img class="rounded-full w-full h-full object-cover"
                         src="https://moviesfilmsandflix.files.wordpress.com/2012/08/the-expendables-2-movie-poster.jpg?w=584"
-                     alt="Your Image Description" data-genres_id="28"> <!--Mustafa: Added data attirbute to assign each catagory its specific Id from json file->
+                        alt="Your Image Description" data-genres_id="28"> <!--Mustafa: Added data attirbute to assign each catagory its specific Id from json file->
                 </button>
 
 
 
                 <!-Crime -->
-                <button id="crime"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://w0.peakpx.com/wallpaper/107/381/HD-wallpaper-criminal-movie-poster-criminal-movies.jpg"
-                        alt="Your Image Description" data-genres_id="12">
-                </button>
+                    <button id="crime"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://w0.peakpx.com/wallpaper/107/381/HD-wallpaper-criminal-movie-poster-criminal-movies.jpg"
+                            alt="Your Image Description" data-genres_id="80">
+                    </button>
 
 
-                <!--Drama-->
-                <button id="drama"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://wallpapercave.com/wp/wp13196792.jpg" alt="Your Image Description" data-genres_id="16">
-                </button>
+                    <!--Drama-->
+                    <button id="drama"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://wallpapercave.com/wp/wp13196792.jpg" alt="Your Image Description"
+                            data-genres_id="18">
+                    </button>
 
 
-                <!--Fantasy-->
-                <button id="fantasy"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://wallpapercave.com/wp/wp6986354.jpg" alt="Your Image Description" data-genres_id="14">
-                </button>
+                    <!--Fantasy-->
+                    <button id="fantasy"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://wallpapercave.com/wp/wp6986354.jpg" alt="Your Image Description"
+                            data-genres_id="14">
+                    </button>
 
-                <!--Horror-->
-                <button id="horror"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://static.vecteezy.com/system/resources/thumbnails/027/103/158/small/zombie-emerges-from-spooky-graveyard-on-halloween-night-full-moon-and-bats-photo.jpg"
-                        alt="Your Image Description" data-genres_id="27">
-                </button>
+                    <!--Horror-->
+                    <button id="horror"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://static.vecteezy.com/system/resources/thumbnails/027/103/158/small/zombie-emerges-from-spooky-graveyard-on-halloween-night-full-moon-and-bats-photo.jpg"
+                            alt="Your Image Description" data-genres_id="27">
+                    </button>
 
-                <!--Comedy-->
-                <button id="comedy"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://wallpapercave.com/wp/wp11029112.jpg" alt="Your Image Description" data-genres_id="35">
-                </button>
+                    <!--Comedy-->
+                    <button id="comedy"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://wallpapercave.com/wp/wp11029112.jpg" alt="Your Image Description"
+                            data-genres_id="35">
+                    </button>
 
-                <!--Romance-->
-                <button id="romance"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://img.freepik.com/premium-vector/love-poster-movie_992397-2633.jpg"
-                        alt="Your Image Description" data-genres_id="10749">
-                </button>
+                    <!--Romance-->
+                    <button id="romance"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://img.freepik.com/premium-vector/love-poster-movie_992397-2633.jpg"
+                            alt="Your Image Description" data-genres_id="10749">
+                    </button>
 
-                <!--Science Fiction-->
-                <button id="science-fiction"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://wallpapercave.com/wp/wp6971709.jpg" alt="Your Image Description" data-genres_id="878">
-                </button>
+                    <!--Science Fiction-->
+                    <button id="science-fiction"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://wallpapercave.com/wp/wp6971709.jpg" alt="Your Image Description"
+                            data-genres_id="878">
+                    </button>
 
-                <!--Documentary -->
-                <button id="documentary"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://neu.edu.tr/wp-content/uploads/2023/09/18/Belgesel.jpg?ver=9a069c0bcaad78d7a1634ba566c9e31e"
-                        alt="Your Image Description" data-genres_id="99"> 
-                </button>
+                    <!--Documentary -->
+                    <button id="documentary"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://neu.edu.tr/wp-content/uploads/2023/09/18/Belgesel.jpg?ver=9a069c0bcaad78d7a1634ba566c9e31e"
+                            alt="Your Image Description" data-genres_id="99">
+                    </button>
 
-                <!--Thriller -->
-                <button id="thriller"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/x/t/3/medium-v-poster-16122493-collage-white-background-thriller-original-imagkzhpwvxzpfha.jpeg?q=90&crop=false"
-                        alt="Your Image Description" data-genres_id="53">
-                </button>
+                    <!--Thriller -->
+                    <button id="thriller"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/x/t/3/medium-v-poster-16122493-collage-white-background-thriller-original-imagkzhpwvxzpfha.jpeg?q=90&crop=false"
+                            alt="Your Image Description" data-genres_id="53">
+                    </button>
 
-                <!--Mystery -->
-                <button id="mystery"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://cdn.vectorstock.com/i/1000v/20/54/mystery-movies-retro-poster-design-vector-34252054.jpg"
-                        alt="Your Image Description" data-genres_id="9648">
-                </button>
+                    <!--Mystery -->
+                    <button id="mystery"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://cdn.vectorstock.com/i/1000v/20/54/mystery-movies-retro-poster-design-vector-34252054.jpg"
+                            alt="Your Image Description" data-genres_id="9648">
+                    </button>
 
-                <!--War -->
-                <button id="war"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://i.pinimg.com/736x/b9/2e/63/b92e63e28d508b5a83bb8ffcdf7ab021.jpg"
-                        alt="Your Image Description" data-genres_id="10752">
-                </button>
+                    <!--War -->
+                    <button id="war"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://i.pinimg.com/736x/b9/2e/63/b92e63e28d508b5a83bb8ffcdf7ab021.jpg"
+                            alt="Your Image Description" data-genres_id="10752">
+                    </button>
 
 
-                <!--Western -->
-                <button id="western"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://wallpapers.com/images/hd/cowboy-background-xmkxqfcvafavhzye.jpg"
-                        alt="Your Image Description" data-genres_id="37">
-                </button>
+                    <!--Western -->
+                    <button id="western"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://wallpapers.com/images/hd/cowboy-background-xmkxqfcvafavhzye.jpg"
+                            alt="Your Image Description" data-genres_id="37">
+                    </button>
 
-                <!--Anime -->
-                <button id="anime"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://lh4.googleusercontent.com/proxy/bHVicKZdLz2TUv9FpJSXEMK4EzZy0qhLqx59-5cSqK6qwmxF3Dd0fRr6X_Omsnff0fysnmh1qiiU8x_4HYGbwJ5jqvVLAoXiyh0jCKpT7G7zdXO1SU-v10OARgK9re1FucQKroNXhfeeEfw"
-                        alt="Your Image Description" data-genres_id="16">
-                </button>
+                    <!--Anime -->
+                    <button id="anime"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://lh4.googleusercontent.com/proxy/bHVicKZdLz2TUv9FpJSXEMK4EzZy0qhLqx59-5cSqK6qwmxF3Dd0fRr6X_Omsnff0fysnmh1qiiU8x_4HYGbwJ5jqvVLAoXiyh0jCKpT7G7zdXO1SU-v10OARgK9re1FucQKroNXhfeeEfw"
+                            alt="Your Image Description" data-genres_id="16">
+                    </button>
 
-                <!--TV Movie -->
-                <button id="tv-movie"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://c0.wallpaperflare.com/preview/993/558/358/screen-netflix-film-night-movie-night.jpg" alt="Your Image Description" data-genres_id="10770"> 
-                </button>
+                    <!--TV Movie -->
+                    <button id="tv-movie"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://c0.wallpaperflare.com/preview/993/558/358/screen-netflix-film-night-movie-night.jpg"
+                            alt="Your Image Description" data-genres_id="10770">
+                    </button>
 
-                <!--Musical -->
-                <button id="musical"
-                    class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
-                    <img class="rounded-full w-full h-full object-cover"
-                        src="https://c4.wallpaperflare.com/wallpaper/28/238/458/movie-high-school-musical-wallpaper-preview.jpg"
-                        alt="Your Image Description" data-genres_id="10402">
-                </button>
+                    <!--Musical -->
+                    <button id="musical"
+                        class="sticky duration-500 border-2 border-blue-600 fixed w-60 transform hover:-translate-y-3 h-60 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600">
+                        <img class="rounded-full w-full h-full object-cover"
+                            src="https://c4.wallpaperflare.com/wallpaper/28/238/458/movie-high-school-musical-wallpaper-preview.jpg"
+                            alt="Your Image Description" data-genres_id="10402">
+                    </button>
                 </button>
             </div>
             <script>
@@ -333,12 +341,13 @@
                     delay: [200, 200]
                 });
             </script>
-        </div>
+        </div> <!-- Find Movies Button -->
         <div id="moviesContainer" style="margin-top:5%; color: white;">
             <ul id="movieList"></ul>
-            <button id="getRandomMoviesButton" class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-blue-500 text-white transition
+            <button id="getRandomMoviesButton"
+                class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-blue-500 text-white transition
                 duration-200 rounded shadow-md bg-blue-500 hover:bg-gray-800 focus:shadow-outline focus:outline-none">Find Movies</button>
-        </div>
+        </div> <!-- Modal -->
         <div id="modal" class="modal">
             <div class="modal-content">
                 <h2>Warning!</h2>
@@ -354,8 +363,10 @@
                 <div class="w-full text-7xl font-bold"></div>
                 <div class="flex flex-col">
                     <div class="flex  mb-12 flex-row justify-between">
-                        <a href="https://github.com/Rinovi/Group-Project" class= "hidden md:block cursor-pointer text-white hover:text-blue-600 uppercase">Github</a>
-                        <a href="mailto:cjwarford98@gmail.com" class= "hidden md:block cursor-pointer text-white hover:text-blue-600 uppercase">Contact</a>
+                        <a href="https://github.com/Rinovi/Group-Project"
+                            class="hidden md:block cursor-pointer text-white hover:text-blue-600 uppercase">Github</a>
+                        <a href="mailto:cjwarford98@gmail.com"
+                            class="hidden md:block cursor-pointer text-white hover:text-blue-600 uppercase">Contact</a>
                         <div class="flex flex-row space-x-8 items-center justify-between">
                             <a href="https://youtu.be/dQw4w9WgXcQ?si=dIaB9ed5475Oh7xd">
                                 <svg width="13" height="9" viewBox="0 0 13 9" fill="none"
@@ -374,4 +385,5 @@
     </footer>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
