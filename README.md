@@ -24,4 +24,4 @@ Here are links to the frameworks and third-party API's that were used in this pr
 * API Ninjas (Chuck Norris API): https://api-ninjas.com/api/chucknorris
 
 Thank you very much if you've made it this far. Finally we have a link to the deployed application here:
-* 
+* https://rinovi.github.io/Trending-Titles/
