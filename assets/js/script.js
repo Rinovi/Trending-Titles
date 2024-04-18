@@ -112,9 +112,14 @@ document.getElementById('closeModal').addEventListener('click', closeModal);
 
 // Logic to check if 3 genres are selected and show the modal
 function handleSave() {
-  if (!genresId) {
+  const selectedGenres = []; // Add your logic to get selected genres
+
+  if (selectedGenres.length !== 3) {
     showModal();
-}} 
+  } else {
+    // Proceed with saving the genres
+  }
+}
 
 // Add event listener to the save button
 document.getElementById('getRandomMoviesButton').addEventListener('click', handleSave);
