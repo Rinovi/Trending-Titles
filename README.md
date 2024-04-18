@@ -2,7 +2,7 @@
 
 ## Description
 
-Welcome to Trending Titles! This website was a collaborative effort between my colleagues Mustafa Ahmed, Logan Benjamin, and myself. As our first group project, we set out to create a website that allows the user to select from a list of genres, then display 5 movie recommendations based off of their choice. In order to create this website, we employed the use of various frameworks and API's that we were previously unfamiliar with. This included the use of tailwind css with jQuery and Unpkg for the framework, Fontawesome for some extra styling and elements, as well as Themoviedb API + API Ninja to bring dynamic functionality to the page. The following is an image of what one could expect to see upon opening the page:
+Welcome to Trending Titles! This website was a collaborative effort between my colleagues Mustafa Ahmed, Logan Benjamin, and myself. As our first group project, we set out to create a website that allows the user to select from a list of genres, then display 5 movie recommendations based off of their choice. In order to create this website, we employed the use of various frameworks and API's that we were previously unfamiliar with. This included the use of tailwind css with jQuery and Unpkg for the framework, Fontawesome for some extra styling and elements, as well as Themoviedb API + API Ninjas to bring dynamic functionality to the page. The following is an image of what one could expect to see upon opening the page:
 ![group](https://github.com/Rinovi/Trending-Titles/assets/160938078/f20d43a7-bf04-4417-a43c-674cc3b18e0d)
 
 ## Usage
@@ -13,15 +13,15 @@ Upon opening the page, the user will be greeted with the header, which contains 
 ## Credits
 
 Here are links to the GitHub profiles of all collaborators for this project:
-* Mustafa:
-* Logan:
-* Caleb:
+* Mustafa: https://github.com/MustafaLH44
+* Logan: https://github.com/Lrbenjamin
+* Caleb: https://github.com/Rinovi
 
 Here are links to the frameworks and third-party API's that were used in this project:
-* TailWind CSS:
-* FontAwesome:
-* Themoviedb API:
-* API Ninja (Chuck Norris API):
+* TailWind CSS: https://tailwindcss.com
+* FontAwesome: https://fontawesome.com
+* Themoviedb API: https://developer.themoviedb.org
+* API Ninjas (Chuck Norris API): https://api-ninjas.com/api/chucknorris
 
 Thank you very much if you've made it this far. Finally we have a link to the deployed application here:
 * 
